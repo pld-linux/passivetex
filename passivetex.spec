@@ -6,6 +6,7 @@ Release:	1
 License:	LaTeX Project Public License (http://www.latex-project.org/lppl.txt)
 Group:		Applications/Publishing/TeX
 Group(pl):	Aplikacje/Publikowanie/TeX
+URL:		http://users.ox.ac.uk/~rahtz/passivetex/
 ##Source0:	ftp://ftp.icm.edu.pl/pub/CTAN/macros/%{name}.tar.gz
 Source0:	ftp://ftp.tex.ac.uk/tex-archive/macros/passivetex.tar.gz
 Source1:	ftp://ftp.tex.ac.uk/tex-archive/macros/xmltex.tar.gz
