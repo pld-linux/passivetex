@@ -3,7 +3,7 @@ Summary:	Macros to process XSL formatting objects
 Summary(pl):	Makra do obróbki obiektów formatuj±cych XSL
 Name:		passivetex
 Version:	1.25
-Release:	1
+Release:	3
 License:	LaTeX Project Public License (http://www.latex-project.org/lppl.txt)
 Group:		Applications/Publishing/TeX
 Source0:	http://www.tei-c.org.uk/Software/passivetex/passivetex.zip
