@@ -2,12 +2,13 @@
 Summary:	Macros to process XSL formatting objects
 Summary(pl):	Makra do obróbki obiektów formatuj±cych XSL
 Name:		passivetex
-Version:	1.19
-Release:	2
+Version:	1.21
+Release:	1
 License:	LaTeX Project Public License (http://www.latex-project.org/lppl.txt)
 Group:		Applications/Publishing/TeX
 ##Source0:	ftp://ftp.icm.edu.pl/pub/CTAN/macros/%{name}.tar.gz
 Source0:	http://users.ox.ac.uk/~rahtz/%{name}/passivetex.zip
+Source1:	%{name}.md5
 URL:		http://users.ox.ac.uk/~rahtz/passivetex/
 Requires:	xmltex
 Requires:	tetex-latex-ams
@@ -33,13 +34,17 @@ dokumentu XML, który pochodzi z transformacji XSL do obiektów
 formatuj±cych.
 
 %prep
+cd %{_sourcedir}
+md5sum -c %{SOURCE1} > /dev/null
+cd -
 %setup -q -n %{name}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{ptexmf}
 
-install *.sty *.xmt *.tex $RPM_BUILD_ROOT%{ptexmf}
+install *.sty *.xmt $RPM_BUILD_ROOT%{ptexmf}
+rm -f test/*.{aux,log}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -52,5 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.passivetex LICENSE
+%doc README.passivetex LICENSE index.html test
 %{ptexmf}
