@@ -6,10 +6,9 @@ Version:	1.24
 Release:	1
 License:	LaTeX Project Public License (http://www.latex-project.org/lppl.txt)
 Group:		Applications/Publishing/TeX
-##Source0:	ftp://ftp.icm.edu.pl/pub/CTAN/macros/%{name}.tar.gz
-Source0:	http://users.ox.ac.uk/~rahtz/%{name}/passivetex.zip
-Source1:	%{name}.md5
-URL:		http://users.ox.ac.uk/~rahtz/passivetex/
+# Source0-md5:	de5afad285bd80e73ccc75fe95fab242
+Source0:	http://www.tei-c.org.uk/Software/passivetex/passivetex.zip
+URL:		http://www.tei-c.org.uk/Software/passivetex/
 Requires:	xmltex
 Requires:	tetex-latex-ams
 Requires:	tetex-fonts-jknappen
@@ -34,9 +33,6 @@ dokumentu XML, który pochodzi z transformacji XSL do obiektów
 formatuj±cych.
 
 %prep
-cd %{_sourcedir}
-md5sum -c %{SOURCE1} > /dev/null
-cd -
 %setup -q -n %{name}
 
 %install
