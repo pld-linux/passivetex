@@ -1,3 +1,4 @@
+
 Summary:	Macros to process XSL formatting objects
 Summary(pl):	Makra do obróbki obiektów formatuj±cych XSL
 Name:		passivetex
@@ -8,15 +9,18 @@ Group:		Applications/Publishing/TeX
 ##Source0:	ftp://ftp.icm.edu.pl/pub/CTAN/macros/%{name}.tar.gz
 Source0:	http://users.ox.ac.uk/~rahtz/%{name}/passivetex.zip
 URL:		http://users.ox.ac.uk/~rahtz/passivetex/
+Requires:	xmltex
+Requires:	tetex-latex-ams
+Requires:	tetex-fonts-jknappen
+Requires:	tetex-fonts-stmaryrd
+Requires:	tetex-latex-wasysym
+Requires(post):	/usr/bin/texhash
+Requires(postun):	/usr/bin/texhash
 Autoreqprov:	no
 BuildArch:	noarch
-Prereq:		tetex
-Requires:	xmltex
-Requires:	tetex-ams
-Requires:	tetex-fonts
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	mydir	%{_datadir}/texmf/tex/xmltex/passivetex
+%define	ptexmf	%{_datadir}/texmf/tex/xmltex/passivetex
 
 %description
 PassiveTeX is a library of TeX macros which can be used to process an
@@ -33,10 +37,9 @@ formatuj±cych.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{mydir}
+install -d $RPM_BUILD_ROOT%{ptexmf}
 
-install *.sty *.xmt **.tex $RPM_BUILD_ROOT%{mydir}
-
+install *.sty *.xmt *.tex $RPM_BUILD_ROOT%{ptexmf}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -50,4 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.passivetex LICENSE
-%{mydir}
+%{ptexmf}
