@@ -5,8 +5,6 @@ Version:	1.11
 Release:	1
 License:	LaTeX Project Public License (http://www.latex-project.org/lppl.txt)
 Group:		Applications/Publishing/TeX
-Group(de):	Applikationen/Publizieren/TeX
-Group(pl):	Aplikacje/Publikowanie/TeX
 ##Source0:	ftp://ftp.icm.edu.pl/pub/CTAN/macros/%{name}.tar.gz
 Source0:	http://users.ox.ac.uk/~rahtz/passivetex/passivetex.zip
 URL:		http://users.ox.ac.uk/~rahtz/passivetex/
