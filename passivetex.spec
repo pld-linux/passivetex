@@ -12,6 +12,7 @@ URL:		http://users.ox.ac.uk/~rahtz/passivetex/
 Autoreqprov:	no
 BuildArch:	noarch
 Prereq:		tetex
+Requires:	xmltex
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	mydir	%{_datadir}/texmf/tex/xmltex/passivetex
