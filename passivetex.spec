@@ -1,3 +1,4 @@
+
 Summary:	Macros to process XSL formatting objects
 Summary(pl):	Makra do obróbki obiektów formatuj±cych XSL
 Name:		passivetex
@@ -13,6 +14,8 @@ Requires:	tetex-latex-ams
 Requires:	tetex-fonts-jknappen
 Requires:	tetex-fonts-stmaryrd
 Requires:	tetex-latex-wasysym
+Requires(post):	/usr/bin/texhash
+Requires(postun):	/usr/bin/texhash
 Autoreqprov:	no
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
