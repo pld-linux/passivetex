@@ -6,8 +6,9 @@ Release:	1
 License:	LaTeX Project Public License (http://www.latex-project.org/lppl.txt)
 Group:		Applications/Publishing/TeX
 Group(pl):	Aplikacje/Publikowanie/TeX
-Source0:	ftp://ftp.icm.edu.pl/pub/CTAN/macros/%{name}.tar.gz
-##Source0:	ftp://ftp.tex.ac.uk/tex-archive/macros/passivetex.zip
+##Source0:	ftp://ftp.icm.edu.pl/pub/CTAN/macros/%{name}.tar.gz
+Source0:	ftp://ftp.tex.ac.uk/tex-archive/macros/passivetex.tar.gz
+Source1:	ftp://ftp.tex.ac.uk/tex-archive/macros/xmltex.tar.gz
 Autoreqprov:	no
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -21,7 +22,7 @@ objects.
 
 
 %prep
-%setup -q -c %{name}-%{version}
+%setup -q -c %{name}-%{version} -a 1
 mv -f %{name}/* .
 rmdir %{name}
 
@@ -30,7 +31,7 @@ rmdir %{name}
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{mydir}
 
-install *.sty $RPM_BUILD_ROOT%{mydir}
+install *.sty xmltex/contrib/passivetex/fotex* $RPM_BUILD_ROOT%{mydir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
