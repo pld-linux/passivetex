@@ -2,7 +2,7 @@ Summary:	Macros to process XSL formatting objects
 Summary(pl):	Makra do obróbki obiektów formatuj±cych XSL
 Name:		passivetex
 Version:	1.19
-Release:	1
+Release:	2
 License:	LaTeX Project Public License (http://www.latex-project.org/lppl.txt)
 Group:		Applications/Publishing/TeX
 ##Source0:	ftp://ftp.icm.edu.pl/pub/CTAN/macros/%{name}.tar.gz
@@ -13,6 +13,7 @@ BuildArch:	noarch
 Prereq:		tetex
 Requires:	xmltex
 Requires:	tetex-ams
+Requires:	tetex-fonts
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	mydir	%{_datadir}/texmf/tex/xmltex/passivetex
