@@ -16,7 +16,7 @@ Requires:	tetex-fonts-stmaryrd
 Requires:	tetex-latex-wasysym
 Requires(post):	/usr/bin/texhash
 Requires(postun):	/usr/bin/texhash
-Autoreqprov:	no
+AutoReqProv:	no
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
