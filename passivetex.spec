@@ -1,6 +1,6 @@
 Summary:	Macros to process XSL formatting objects
 Name:		passivetex
-Version:	1.5
+Version:	1.6
 Release:	1
 License:	LaTeX Project Public License (http://www.latex-project.org/lppl.txt)
 Group:		Applications/Publishing/TeX
