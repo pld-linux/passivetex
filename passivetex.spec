@@ -9,6 +9,7 @@ Group:		Applications/Publishing/TeX
 Source0:	http://www.tei-c.org.uk/Software/passivetex/passivetex.zip
 # Source0-md5:	03e05ab33d3abe1a316c8d9877c315d6
 URL:		http://www.tei-c.org.uk/Software/passivetex/
+BuildRequires:	unzip
 Requires:	xmltex
 Requires:	tetex-latex-ams
 Requires:	tetex-fonts-jknappen
