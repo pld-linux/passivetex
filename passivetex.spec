@@ -2,16 +2,17 @@ Summary:	Macros to process XSL formatting objects
 Name:		passivetex
 Version:	1.4
 Release:	1
-## check it!
 License:	LaTeX Project Public License (http://www.latex-project.org/lppl.txt)
 Group:		Applications/Publishing/TeX
+Group(de):	Applikationen/Publizieren/TeX
 Group(pl):	Aplikacje/Publikowanie/TeX
-URL:		http://users.ox.ac.uk/~rahtz/passivetex/
 ##Source0:	ftp://ftp.icm.edu.pl/pub/CTAN/macros/%{name}.tar.gz
-Source0:	ftp://ftp.tex.ac.uk/tex-archive/macros/passivetex.tar.gz
+Source0:	ftp://ftp.tex.ac.uk/tex-archive/macros/%{name}.tar.gz
 Source1:	ftp://ftp.tex.ac.uk/tex-archive/macros/xmltex.tar.gz
+URL:		http://users.ox.ac.uk/~rahtz/passivetex/
 Autoreqprov:	no
 BuildArch:	noarch
+Prereq:		tetex
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	mydir	%{_datadir}/texmf/tex/latex/passivetex
@@ -27,7 +28,6 @@ objects.
 mv -f %{name}/* .
 rmdir %{name}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{mydir}
@@ -38,10 +38,10 @@ install *.sty xmltex/contrib/passivetex/fotex* $RPM_BUILD_ROOT%{mydir}
 rm -rf $RPM_BUILD_ROOT
 
 %post
-[ -x %{_bindir}/texhash ] && /usr/bin/env - %{_bindir}/texhash 1>&2
+/usr/bin/texhash 1>&2
 
 %postun
-[ -x %{_bindir}/texhash ] && /usr/bin/env - %{_bindir}/texhash 1>&2
+/usr/bin/texhash 1>&2
 
 %files
 %defattr(644,root,root,755)
