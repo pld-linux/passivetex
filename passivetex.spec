@@ -29,7 +29,7 @@ objects.
 
 %description -l pl
 PassiveTeX jest bibliotek± makr TeXa, których mo¿na u¿ywaæ do obróbki
-dokumentu XML, który pochodzi z transformacji XSL do obiektów
+dokumentu XML pochodz±cego z transformacji XSL-a do obiektów
 formatuj±cych.
 
 %prep
