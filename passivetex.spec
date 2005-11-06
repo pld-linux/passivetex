@@ -15,13 +15,13 @@ Requires:	tetex-latex-ams
 Requires:	tetex-fonts-jknappen
 Requires:	tetex-fonts-stmaryrd
 Requires:	tetex-latex-wasysym
-Requires(post):	/usr/bin/texhash
-Requires(postun):	/usr/bin/texhash
+Requires(post,postun):	%{_bindir}/texhash
 AutoReqProv:	no
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	ptexmf	%{_datadir}/texmf/tex/xmltex/passivetex
+%define		ptexmf	%{_datadir}/texmf/tex/xmltex/passivetex
+%define		texhash	[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2;
 
 %description
 PassiveTeX is a library of TeX macros which can be used to process an
@@ -47,10 +47,10 @@ rm -f test/*.{aux,log}
 rm -rf $RPM_BUILD_ROOT
 
 %post
-/usr/bin/texhash 1>&2
+%texhash
 
 %postun
-/usr/bin/texhash 1>&2
+%texhash
 
 %files
 %defattr(644,root,root,755)
