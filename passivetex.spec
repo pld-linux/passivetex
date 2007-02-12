@@ -1,6 +1,6 @@
 
 Summary:	Macros to process XSL formatting objects
-Summary(pl):	Makra do obróbki obiektów formatuj±cych XSL
+Summary(pl.UTF-8):   Makra do obrÃ³bki obiektÃ³w formatujÄ…cych XSL
 Name:		passivetex
 Version:	1.25
 Release:	4
@@ -28,10 +28,10 @@ PassiveTeX is a library of TeX macros which can be used to process an
 XML document which results from an XSL transformation to formatting
 objects.
 
-%description -l pl
-PassiveTeX jest bibliotek± makr TeXa, których mo¿na u¿ywaæ do obróbki
-dokumentu XML pochodz±cego z transformacji XSL-a do obiektów
-formatuj±cych.
+%description -l pl.UTF-8
+PassiveTeX jest bibliotekÄ… makr TeXa, ktÃ³rych moÅ¼na uÅ¼ywaÄ‡ do obrÃ³bki
+dokumentu XML pochodzÄ…cego z transformacji XSL-a do obiektÃ³w
+formatujÄ…cych.
 
 %prep
 %setup -q -n %{name}
