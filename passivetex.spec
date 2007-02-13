@@ -1,6 +1,6 @@
 
 Summary:	Macros to process XSL formatting objects
-Summary(pl.UTF-8):   Makra do obróbki obiektów formatujących XSL
+Summary(pl.UTF-8):	Makra do obróbki obiektów formatujących XSL
 Name:		passivetex
 Version:	1.25
 Release:	4
